@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Apr 09, 2020 at 03:05 PM
--- Server version: 5.7.26
--- PHP Version: 7.3.8
+-- Host: 127.0.0.1
+-- Generation Time: Aug 05, 2022 at 10:56 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `pw_043040023`
+-- Database: `pw_182101028`
 --
 
 -- --------------------------------------------------------
@@ -28,21 +29,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `mahasiswa` (
   `id` int(11) NOT NULL,
-  `nama` varchar(255) NOT NULL,
+  `nama` varchar(100) NOT NULL,
   `nrp` char(9) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `jurusan` varchar(255) NOT NULL,
-  `gambar` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `email` varchar(100) NOT NULL,
+  `jurusan` varchar(100) NOT NULL,
+  `gambar` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `mahasiswa`
 --
 
 INSERT INTO `mahasiswa` (`id`, `nama`, `nrp`, `email`, `jurusan`, `gambar`) VALUES
-(1, 'Sandhika Galih', '043040023', 'sandhikagalih@unpas.ac.id', 'Teknik Informatika', 'sandhika.jpg'),
-(2, 'Doddy Ferdiansyah', '153040123', 'doddy@gmail.com', 'Teknik Mesin', 'doddy.jpg'),
-(3, 'Erik', '023040321', 'erik@yahoo.com', 'Teknik Industri', 'erik.jpg');
+(1, 'Muhamad Hamdani', '182101028', 'hamdani2k@gmail.com', 'Teknik Informatika', 'hamdani.jpg'),
+(2, 'Rizky Purnama', '192101003', 'rizkypurnama@yahoo.com', 'Teknik Industri', 'rizky.jpeg'),
+(3, 'Gagan Kargana', '192101006', 'gagan@gmail.com', 'Manajemen', 'gagan.png');
 
 --
 -- Indexes for dumped tables
@@ -63,6 +64,7 @@ ALTER TABLE `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
